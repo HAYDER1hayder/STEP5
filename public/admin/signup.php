@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styleLogSig.css">
-    <link rel="stylesheet" href="../public/css/bmi_form.css">
+    <link rel="stylesheet" href="../css/styleLogSig.css">
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
@@ -15,15 +14,14 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
     <div class="container">
         <h2>Sign Up</h2>
         <?php
         // Include the AuthController and handle the signup process
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            require '../app/controllers/AuthController.php';
+            require '../../app/controllers/AuthController.php';
             $authController = new AuthController();
-            $authController->signupUser($_POST['username'], $_POST['password']);
+            $authController->signupAdmin($_POST['username'], $_POST['password']);
         }
         ?>
         <form method="POST">
