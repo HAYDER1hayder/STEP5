@@ -12,7 +12,7 @@ if (isset($_SESSION['bmi_result'])) {
     exit();
 }*/
 
-require '../app/config/database.php';
+require '../config/database.php';
 require '../app/models/BmiModel.php';
 require '../app/controllers/BmiController.php';
 

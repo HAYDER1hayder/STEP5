@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require '../../app/config/database.php';
+require '../../config/database.php';
 require '../../app/models/BmiModel.php';
 require '../../app/controllers/BmiController.php';
 

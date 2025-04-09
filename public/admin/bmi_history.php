@@ -8,7 +8,7 @@ if (!isset($_SESSION["username"]) || $_SESSION["role"] !== 'admin') {
 }
 
 
-require '../../app/config/database.php';
+require '../../config/database.php';
 require '../../app/models/BmiModel.php';
 require '../../app/controllers/BmiController.php';
 
